@@ -99,7 +99,7 @@ cat subdomains.txt | httpx -probe -sc -path "/robots.txt"
 ```
 
 
-### Javascript Enumeration 
+### Javascript Enumeration. Refer to https://github.com/B-and-w-sec/shell-scripts
 
 ```bash
 cat subdomains.txt | subjs | tee -a javascript.txt
@@ -225,5 +225,5 @@ cat endpoints.txt | nuclei
 ```bash
 nuclei -u https://targets.com:8858 -t /root/nuclei-template/
 ```
-
+### Use Burpsuite for further exploitation.
 
