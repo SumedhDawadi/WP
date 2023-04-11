@@ -183,6 +183,6 @@ ffuf -c -u https://target.com/FUZZ.html -w /usr/share/wordlists/bughunting/sdasd
 ```
 - Bruteforce path  refering to nmap or naabu result for specific path
 ```bash
-dirsearch -u http://target.com:8858/ -r #use different wordlists
+dirsearch -u http://target.com:8858/ -r  -w #use different wordlists
 ```
 
