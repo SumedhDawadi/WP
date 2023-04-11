@@ -57,6 +57,67 @@ subzy -target /home/path/to/subdomains.txt
 ```
 
 
+### ASN Enumerations
+
+```bash
+cat subdomains.txt | httpx -asn | tee -a asn.txt
+```
+
+```bash
+asn -d domainname.com
+```
+```bash
+asn -d IP
+```
+
+### ASN-Shodan Enumeration
+
+```bash
+asn:ASxxxx
+```
+### Shodan-Facet Analysis
+```bash
+asn:AS123XX http.title
+```
+
+### httpx 
+- Status Code
+```bash
+cat subdomains.txt | httpx -mc 200,204,301,307,401,405,400,302 -sc
+```
+- IP Grabbing
+```bash
+cat subdomains.txt| httpx -probe -ip -cdn
+```
+- Probbing except 404 response code
+```bash
+cat subdomains.txt | httpx -sc -fc 404
+```
+- Grabbing Specific Path
+```bash
+| httpx -probe -sc -path "/robots.txt"
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
