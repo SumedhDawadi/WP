@@ -147,7 +147,7 @@ cat httpx.json | jq
 • user:username "secret"
 ```
 
-### Nmap
+### Port-Scanning
 
 ```bash
 naabu -list subdomains.txt | tee -a naabu_port_number.txt
@@ -165,12 +165,24 @@ cat subdomains.txt  | naabu -silent
 echo ASxxxx | naabu 
 ```
 
+### Content Discovery
+- Make sure you change you wordlists. https://github.com/SumedhDawadi/wordlists
+```bash
+dirsearch -u https://domains.com -r -e php,html,js,txt,.zip.jsp,jspx,.bak
+```
 
-
-
-
-
-
-
-
+```bash
+gobuster dir -u http://target.com -w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt 
+```
+```bash
+ffuf -u https://target.com/FUZZ -w /usr/share/wordlists/ -mc 200,204,301,307,401,405,400,302
+```
+- Change extensions 
+```bash
+ffuf -c -u https://target.com/FUZZ.html -w /usr/share/wordlists/bughunting/sdasdasdasd.txt -mc 200,204,301,307,401,405,400,302
+```
+- Bruteforce path  refering to nmap or naabu result for specific path
+```bash
+dirsearch -u http://target.com:8858/ -r #use different wordlists
+```
 
