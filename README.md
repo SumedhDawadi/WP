@@ -99,14 +99,26 @@ cat subdomains.txt | httpx -sc -fc 404
 ```
 
 
+### Javascript Enumeration 
+
+```bash
+cat subdomains.txt | subjs | tee -a javascript.txt
+```
+```bash
+while read url; do python3 /home/sumedh/tools/SecretFinder/SecretFinder.py -i $url -o cli ; done < "$1"
+```
+
+```bash
+while read url ; do echo e "\n\n --------- URL: " $url "-----------" ;  python3 /home/sumedh/tools/LinkFinder/linkfinder.py -i $url -o cli; done < "$1"
+```
 
 
-
-
-
-
-
-
+```bash
+cat subdomains.txt | httpx -sc -td -server -ip -cname -json -o httpx.json -mc 200,204,301,307,401,405,400,302,500 -x POST GET TRACE OPTIONS
+```
+```bash
+cat httpx.json | jq
+```
 
 
 
