@@ -95,7 +95,7 @@ cat subdomains.txt | httpx -sc -fc 404
 ```
 - Grabbing Specific Path
 ```bash
-| httpx -probe -sc -path "/robots.txt"
+cat subdomains.txt | httpx -probe -sc -path "/robots.txt"
 ```
 
 
