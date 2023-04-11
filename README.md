@@ -165,6 +165,28 @@ cat subdomains.txt  | naabu -silent
 echo ASxxxx | naabu 
 ```
 
+### Endpoint Extraction 
+
+```bash
+cat subdomains.txt | katana | tee -a katana.txt
+```
+```bash
+cat subdomains.txt | gauplus | tee -a gauplus.txt
+```
+```bash
+cat subdomains.txt | waybackurl | tee -a wayback.txt
+```
+```bash
+cat subdomains.txt | hakrawler | tee  -a hakrawler.txt
+```
+```bash
+cat subdomains.txt | gau --blacklist png,jpg,jpeg,img,svg,mp3,mp4,eot,woff1,woff2,css | tee -a extension_extractor.txt
+```
+### Sorting Endpoints
+```bash
+sort katana.txt gauplus.txt wayback.txt hakrawler.txt extension_extractor.txt > endpoints.txt
+```
+
 ### Content Discovery
 - Make sure you change you wordlists. https://github.com/SumedhDawadi/wordlists
 ```bash
