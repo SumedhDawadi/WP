@@ -214,3 +214,16 @@ dirsearch -u http://target.com:8858/ -r  -w #use different wordlists
 cat endpoints.txt | gf -list
 ```
 
+### Nuclei 
+- Use Cent as a custom Nuclei Templates. https://github.com/xm1k3/cent
+```bash
+cat subdoamins.txt | nuclei 
+```
+```bash
+cat endpoints.txt | nuclei
+```
+```bash
+nuclei -u https://targets.com:8858 -t /root/nuclei-template/
+```
+
+
