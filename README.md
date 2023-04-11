@@ -208,3 +208,9 @@ ffuf -c -u https://target.com/FUZZ.html -w /usr/share/wordlists/bughunting/sdasd
 dirsearch -u http://target.com:8858/ -r  -w #use different wordlists
 ```
 
+### GF Pattern
+- Use GF template one by one
+```bash
+cat endpoints.txt | gf -list
+```
+
