@@ -62,7 +62,7 @@ subzy -target /home/path/to/subdomains.txt
 ```bash
 cat subdomains.txt | httpx -asn | tee -a asn.txt
 ```
-
+- https://github.com/nitefood/asn
 ```bash
 asn -d domainname.com
 ```
