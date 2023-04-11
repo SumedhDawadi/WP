@@ -120,8 +120,32 @@ cat subdomains.txt | httpx -sc -td -server -ip -cname -json -o httpx.json -mc 20
 cat httpx.json | jq
 ```
 
+### Google dork : https://pentest-tools.com/information-gathering/google-hacking
 
+```bash
+• site:tesla.com -www -shop -share -ir -mfa
+• site:pastebin.com "tesla.com"
+• site:jsfiddle.net "tesla.com"
+• site:codebeautify.org "tesla.com"
+• site:codepen.io "tesla.com"
+• site:tesla.com ext:php inurl:?
+• site:openbugbounty.org inurl:reports intext:"yahoo.com"
+• (site:tesla.com | site:teslamotors.com) & "choose file"
+```
+### Github dork 
 
+```bash
+• "site.com" API_key
+• "site.com" secret_key
+• "site.com" email
+• "site.com" password
+• "site.com" login
+• "site.com" admin
+• org:org_name "password"
+• org:org_name "secret"
+• user:username "password"
+• user:username "secret"
+```
 
 
 
