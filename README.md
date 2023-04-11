@@ -16,24 +16,51 @@ python3 oneforall.py --target target.com run
 
 ```bash
 subfinder -d target.com | tee -a subfinder.txt
+subfinder -dL subfinder.txt | tee -a subfinders.txt
 ```
 ```bash
 findomain -t target.com  | tee -a  findomain.txt
 ```
 ```bash
-ffuf -u https://target.com -H "Host:FUZZ.target.com" -w -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-5000.txt
+ffuf -u https://target.com -H "Host:FUZZ.target.com" -w -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-5000.txt 
 
 ```
 ```bash
- assetfinder --subs-only target.com | tee -a assetfinderoutput
+ assetfinder --subs-only target.com | tee -a assetfinder.txt
 ```
 ```bash
-github-subdomains -d example.com -raw -o githubonlysubdomains.txt
+github-subdomains -d example.com -raw -o githubsubdomains.txt
 ```
 
 ```bash
 python3 knockpy.py domain.com | tee -a knockpy.txt 
 ```
+
+### Subdomain sorting
+
+```bash
+sort subfinders.txt findomain.txt assetfinder.txt githubsubdomains.txt knockpy.txt > target_subdomains.txt
+```
+```bash
+cat target_subdomains.txt | httprobe | tee -a subdomains.txt 
+```
+
+
+
+###  Subdomain Takeover
+
+```bash
+cat subdomains.txt | nuclei -t /root/nuclei-template/takeovers
+```
+```bash
+subzy -target /home/path/to/subdomains.txt
+```
+
+
+
+
+
+
 
 
 
