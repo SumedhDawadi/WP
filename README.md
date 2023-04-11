@@ -147,11 +147,23 @@ cat httpx.json | jq
 • user:username "secret"
 ```
 
+### Nmap
 
-
-
-
-
+```bash
+naabu -list subdomains.txt | tee -a naabu_port_number.txt
+```
+```bash
+naabu -l subdomains.txt -rate 3000 -retries 1 -warm-up-time 0 -c 50 -top-ports 65535 - silent
+```
+```bash
+cat subdoamins.txt | aquatone --ports xlarge
+```
+```bash
+cat subdomains.txt  | naabu -silent 
+```
+```bash
+echo ASxxxx | naabu 
+```
 
 
 
