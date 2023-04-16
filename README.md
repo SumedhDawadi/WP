@@ -10,8 +10,11 @@ Checklist for Webapplication Recon
 python3 oneforall.py --target target.com run
 ```
 
+### Wordpress Scanner
 
-
+```bash
+wpscan --url http://192.168.145.133/wordpress -e ,vt,tt,u,ap
+```
 ###  Subdomain Enumeration.
 
 ```bash
