@@ -35,11 +35,13 @@ github-subdomains -d example.com -raw -o githubsubdomains.txt
 ```bash
 python3 knockpy.py domain.com | tee -a knockpy.txt 
 ```
-
+```bash
+amass enum -v -src -ip -brute -min-for-recursive 2 -d target.com | tee -a amass.txt
+```
 ### Subdomain sorting
 
 ```bash
-sort subfinders.txt findomain.txt assetfinder.txt githubsubdomains.txt knockpy.txt > target_subdomains.txt
+sort subfinders.txt findomain.txt assetfinder.txt githubsubdomains.txt amass.txt knockpy.txt > target_subdomains.txt
 ```
 ```bash
 cat target_subdomains.txt | httprobe | tee -a subdomains.txt 
