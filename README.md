@@ -125,7 +125,7 @@ cat subdomains.txt | httpx -sc -td -server -ip -cname -json -o httpx.json -mc 20
 cat httpx.json | jq
 ```
 
-### Google dork : https://pentest-tools.com/information-gathering/google-hacking
+### Google dork : https://pentest-tools.com/information-gathering/google-hacking OR http://seckrd.com/google-hacking
 
 ```bash
 • site:tesla.com -www -shop -share -ir -mfa
