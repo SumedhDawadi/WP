@@ -74,7 +74,7 @@ asn -d domainname.com
 ```bash
 asn -d IP
 ```
-
+#### Shodan Query : https://mr-koanti.github.io/shodan
 ### ASN-Shodan Enumeration
 
 ```bash
