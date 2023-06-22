@@ -22,6 +22,9 @@ subfinder -d target.com | tee -a subfinder.txt
 subfinder -dL subfinder.txt | tee -a subfinders.txt
 ```
 ```bash
+```bash
+subfinder -d target.com -silent -o subs.txt | httpx -title -content-length -status-code -silent
+```
 findomain -t target.com  | tee -a  findomain.txt
 ```
 ```bash
