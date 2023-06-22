@@ -21,7 +21,7 @@ wpscan --url http://192.168.145.133/wordpress -e vt,tt,u,ap
 subfinder -d target.com | tee -a subfinder.txt
 subfinder -dL subfinder.txt | tee -a subfinders.txt
 ```
-```bash
+
 ```bash
 subfinder -d target.com -silent -o subs.txt | httpx -title -content-length -status-code -silent
 ```
