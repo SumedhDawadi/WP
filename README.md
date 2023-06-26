@@ -435,3 +435,8 @@ GIF89a; <?php system("id") ?>
 
 ```
 
+## Important Links 
+#### notes for Pentesting,hacking techniques and tools for penetration testings, bug bounty, CTFs
+```bash
+https://exploit-notes.hdks.org/)https://exploit-notes.hdks.org/
+```
