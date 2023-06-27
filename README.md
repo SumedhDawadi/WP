@@ -440,3 +440,7 @@ GIF89a; <?php system("id") ?>
 ```bash
 https://exploit-notes.hdks.org/
 ```
+#### Hash Cracker
+```bash
+[https://exploit-notes.hdks.org/](https://hash-cracker.hdks.org/)https://hash-cracker.hdks.org/
+```
