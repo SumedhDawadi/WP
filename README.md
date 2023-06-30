@@ -147,7 +147,7 @@ AGAIN,
 
 grep -r -E "aws_access_key|aws_secret_key|api key|passwd|pwd|heroku|slack|firebase|swagger|aws_secret_key|aws key|password|ftp password|jdbc|db|sql|secret jet|config|admin|pwd|json|gcp|htaccess|.env|ssh key|.git|access key|secret token|oauth_token|oauth_token_secret|smtp" *.js
 ```
-### Google dork : https://pentest-tools.com/information-gathering/google-hacking OR http://seckrd.com/google-hacking
+### Google dork : https://pentest-tools.com/information-gathering/google-hacking OR http://seckrd.com/google-hacking and https://taksec.github.io/google-dorks-bug-bounty/
 
 ```bash
 • site:tesla.com -www -shop -share -ir -mfa
