@@ -447,3 +447,8 @@ https://hash-cracker.hdks.org/
 ```bash
 https://htbmachines.github.io/
 ```
+#### Hack tools commands and more 
+```bash
+https://sirensecurity.io
+```
+
