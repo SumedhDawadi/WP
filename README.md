@@ -441,6 +441,11 @@ GIF89a; <?php system("id") ?>
 ```bash
 https://exploit-notes.hdks.org/
 ```
+
+#### Google API keys vuln
+```bash
+https://googlekey.blindf.com/
+```
 #### Hash Cracker
 ```bash
 https://hash-cracker.hdks.org/
