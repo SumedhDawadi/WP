@@ -44,6 +44,11 @@ python3 knockpy.py domain.com | tee -a knockpy.txt
 ```bash
 amass enum -v -src -ip -brute -min-for-recursive 2 -d target.com | tee -a amass.txt
 ```
+### Extracting IP's from Subdomains
+```bash
+cat subdoamins.txt | xargs -n1 host | grep "has address" | cut -d" " -f4 | sort -u > ips.txt
+```
+
 ### Subdomain sorting
 
 ```bash
