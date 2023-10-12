@@ -38,7 +38,9 @@ whois -h whois.radb.net  -- '-i origin AS714' | grep -Eo "([0-9.]+){4}/[0-9]+" |
 ```bash
 subfinder -d target.com -silent -o subs.txt | httpx -title -content-length -status-code -silent
 ```
+```bash
 findomain -t target.com  | tee -a  findomain.txt
+```
 ```
 ```bash
 ffuf -u https://target.com -H "Host:FUZZ.target.com" -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-5000.txt 
