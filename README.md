@@ -12,7 +12,7 @@ python3 oneforall.py --target target.com run
 ### Sudomy for automation (Recomended / use api for more wide scope)
 
 ```bash
-[wpscan --url http://192.168.145.133/wordpress -e vt,tt,u,ap](https://github.com/screetsec/Sudomy)
+https://github.com/screetsec/Sudomy.git
 ```
 ### Acquisitions for wide scope range
 ```bash
