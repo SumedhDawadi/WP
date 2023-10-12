@@ -9,7 +9,11 @@ Checklist for Webapplication Recon
 ```bash
 python3 oneforall.py --target target.com run
 ```
+### Sudomy for automation (Recomended / use api for more wide scope)
 
+```bash
+[wpscan --url http://192.168.145.133/wordpress -e vt,tt,u,ap](https://github.com/screetsec/Sudomy)
+```
 ### Acquisitions for wide scope range
 ```bash
 1. Crunchbase for finding acquisitions
@@ -246,7 +250,19 @@ cat subdomains.txt | gau --blacklist png,jpg,jpeg,img,svg,mp3,mp4,eot,woff1,woff
 ```bash
 sort katana.txt gauplus.txt wayback.txt hakrawler.txt extension_extractor.txt > endpoints.txt
 ```
-
+### Grep for few keywords
+1. jwt
+2. token
+3. admin
+4. password
+5. drive
+6. outlook
+7. redirect
+8. info
+9. number
+```bash
+cat endpoints.txt | grep "keywords"
+```
 ### Content Discovery
 - Make sure you change you wordlists. https://github.com/SumedhDawadi/wordlists
 ```bash
