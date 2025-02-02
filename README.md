@@ -179,6 +179,14 @@ AGAIN,
 
 grep -r -E "aws_access_key|aws_secret_key|api key|passwd|pwd|heroku|slack|firebase|swagger|aws_secret_key|aws key|password|ftp password|jdbc|db|sql|secret jet|config|admin|pwd|json|gcp|htaccess|.env|ssh key|.git|access key|secret token|oauth_token|oauth_token_secret|smtp" *.js
 ```
+
+### Information Disclouser 
+
+```bash
+https://web.archive.org/cdx/search?url=.canva.com/*&collapse=urlkey&output=text&fl=original
+
+curl -G "https://web.archive.org/cdx/search/cdx" --data-urlencode "url=*.canva.com/*" --data-urlencode "collapse=urlkey" --data-urlencode "output=text" --data-urlencode "fl=original" 
+```
 ### Google dork : https://pentest-tools.com/information-gathering/google-hacking OR http://seckrd.com/google-hacking and https://taksec.github.io/google-dorks-bug-bounty/
 
 ```bash
